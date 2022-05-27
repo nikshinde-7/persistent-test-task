@@ -29,7 +29,6 @@ http://139.59.34.28:3000/api/
 ## Install Dependencies
 
 ```
-cd backend
 npm install
 ```
 ## Start App
