@@ -36,7 +36,6 @@ exports.authenticateUser = async (req, res, next) => {
 exports.signUpUser = async (req, res, next) => {
   try {
     const { data, error } = await createUserService(req.body);
-    console.log(data, error, '>>> Error ')
     passport.authenticate('local', (err, user, info) => {
       if (!_.isEmpty(user)) {
         req.logIn(user, async (error) => {
