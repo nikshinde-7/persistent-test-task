@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "c085c296-29df-4249-88d2-18eba7b93f78",
+		"name": "Users-Categories Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/category/get-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category",
+								"get-category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Categories Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/category/get-category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category",
+										"get-category"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"628f9f1a5a5bea4430d7f4b6\",\n        \"categoryName\": \"Free\",\n        \"categoryDescription\": \"Hey !!\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"628f9f215a5bea4430d7f4b8\",\n        \"categoryName\": \"Paid\",\n        \"categoryDescription\": \"Hey !!\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryName\": \"Paid Premium\",\n    \"categoryDescription\": \"Hey !!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/category/create-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category",
+								"create-category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Category Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"categoryName\": \"Free\",\n    \"categroyDescription\": \"Hey !!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/category/create-category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category",
+										"create-category"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"categoryName\": \"Free\",\n    \"_id\": \"628f9e74a429a414a24bd78f\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\": \"628f9f215a5bea4430d7f4b8\",\n    \"categoryName\": \"Updated Name\",\n    \"categoryDescription\": \"Updated Description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/category/update-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category",
+								"update-category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Category Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"categoryId\": \"628f9f215a5bea4430d7f4b8\",\n    \"categoryName\": \"Updated Name\",\n    \"categoryDescription\": \"Updated Description\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/category/update-category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category",
+										"update-category"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"_id\": \"628f9f215a5bea4430d7f4b8\",\n    \"categoryName\": \"Updated Name\",\n    \"categoryDescription\": \"Updated Description\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/category/delete-category?categoryId=628f9f215a5bea4430d7f4b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category",
+								"delete-category"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "628f9f215a5bea4430d7f4b8"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/category/delete-category?categoryId=628f9f215a5bea4430d7f4b8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category",
+										"delete-category"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "628f9f215a5bea4430d7f4b8"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Email-Category",
+			"item": [
+				{
+					"name": "Add Email to category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\": \"6290ae2ecadff67564dd845a\",\n    \"email\": \"nshinde23@deqode.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/email-category/add-email-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"email-category",
+								"add-email-category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Email to category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"categoryId\": \"628fbebfd89f2b91519103ce\",\n    \"email\": \"Pjane@deqode.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/email-category/add-email-category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"email-category",
+										"add-email-category"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"message\": \"Error: Email Already added to category\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Email From category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/email-category/delete-email-category?categoryId=628fc945d5bbb83cbfaa581d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"email-category",
+								"delete-email-category"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "628fc945d5bbb83cbfaa581d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category with email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/email-category/get-email-category?categoryId=628fbec7d89f2b91519103d0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"email-category",
+								"get-email-category"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "628fbec7d89f2b91519103d0"
+								}
+							]
+						},
+						"description": "This API will be used for Seeing category Details along with Email"
+					},
+					"response": [
+						{
+							"name": "Get Category with email",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/email-category/get-email-category?categoryId=628fbec7d89f2b91519103d0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"email-category",
+										"get-email-category"
+									],
+									"query": [
+										{
+											"key": "categoryId",
+											"value": "628fbec7d89f2b91519103d0"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"categoryName\": \"Premium\",\n    \"categoryId\": \"628fbec7d89f2b91519103d0\",\n    \"email\": [\n        \"nshinde@deqode.com\",\n        \"pjane@deqode.com\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Email Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\": \"6290bd2f522b5e58be6f5140\",\n    \"email\": \"updated@deqode.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/email-category/update-email-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"email-category",
+								"update-email-category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Email Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"categoryId\": \"6290bd2f522b5e58be6f5140\",\n    \"email\": \"updated@deqode.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/email-category/update-email-category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"email-category",
+										"update-email-category"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3001"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"78-z46Z7VSGsNPAqdgfovIcgos7Kpo\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3AvOActvKxsBEHOk6GgNqq-ialIC9okQEE.ac%2Bzo%2FIzQqD2zvS97ACpPL7ep%2BLyTk59bbaz2Cu3FsY; Path=/; Expires=Wed, 26 May 2027 12:22:02 GMT; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 12:22:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"6290bd2f522b5e58be6f5140\",\n        \"categoryId\": \"6290ae2ecadff67564dd845a\",\n        \"email\": \"updated@deqode.com\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"n@deq.com\",\n    \"password\": \"abcd@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"n@deq.com\",\n    \"password\": \"abcd@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:3001"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "125"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7d-3MJMSU+F5ykpG0kbULBLvcATs2A\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3AkOHTPWY2NChv2bBSPqBdBQWu3yCOyPyc.ZyrehhbJqTzhaivKj4S%2BBL8i85jhnEwVeqMbPO%2FHn7Y; Path=/; Expires=Wed, 26 May 2027 11:11:20 GMT; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 May 2022 11:11:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"user\": {\n            \"_id\": \"6290b0e05bcc3f44e6aa5553\",\n            \"name\": \"Nikhil Shinde\",\n            \"email\": \"n@deq.com\",\n            \"password\": \"abcd@123\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"n@deq.com\",\n    \"password\": \"abcd@123\",\n    \"name\": \"Nik Shinde\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
