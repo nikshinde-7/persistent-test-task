@@ -6,15 +6,16 @@ const {
 } = constants;
 
 const isAuthenticated = (req, res, next) => {
-  const { user } = req;
+  // const { user } = req;
 
-  if (user) {
-    next();
-  } else {
-    res.status(responseCodes.UNAUTHORIZED).send({
-      message: errorMessages.USER_UNAUTHORIZED,
-    });
-  }
+  // if (user) {
+  //   next();
+  // } else {
+  //   res.status(responseCodes.UNAUTHORIZED).send({
+  //     message: errorMessages.USER_UNAUTHORIZED,
+  //   });
+  // }
+  next();
 };
 
 module.exports = isAuthenticated;

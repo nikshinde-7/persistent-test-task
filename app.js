@@ -104,19 +104,19 @@ passport.use(
   ),
 );
 
-app.use((req, res, next) => {
-  next(createHttpError(404));
-});
+// app.use((req, res, next) => {
+//   next(createHttpError(404));
+// });
 
-app.use((err, req, res) => {
-  res.status(err.status || 500);
-  res.json({
-    error: {
-      status: err.status || 500,
-      message: err.message,
-    },
-  });
-});
+// app.use((err, req, res) => {
+//   res.status(err.status || 500);
+//   res.json({
+//     error: {
+//       status: err.status || 500,
+//       message: err.message,
+//     },
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log('Server is running on port : ', PORT);
