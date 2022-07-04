@@ -43,5 +43,5 @@ https://www.mongodb.com/try/download/community
 ## Postman collection :
 
 ```
-File available in root directory with name (Users-Categories.postman_collection.json)
+File is available in root directory with name (Users-Categories.postman_collection.json)
 ```
